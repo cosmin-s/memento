@@ -24,7 +24,7 @@ public class Tag {
 	
 	@ManyToMany(mappedBy="tags",
 			cascade = CascadeType.PERSIST)
-	@XmlTransient
+	@JsonIgnore
 	private List<Note> notes;
 	
 	@Column(name="NAME")
@@ -37,11 +37,11 @@ public class Tag {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	@JsonIgnore
 	public List<Note> getNotes() {
 		return notes;
 	}
-
+	@JsonIgnore
 	public void setNotes(List<Note> notes) {
 		this.notes = notes;
 	}
