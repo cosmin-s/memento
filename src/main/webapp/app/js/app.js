@@ -10,6 +10,10 @@ mementoApp.config(['$routeProvider',
 	      templateUrl: 'app/partials/note-list.html',
 	      controller: 'NoteListCtrl'
 	    }).
+	    when('/notes/add', {
+		      templateUrl: 'app/partials/note-create.html',
+		      controller: 'NoteCreateCtrl'
+		    }).
 	    otherwise({
 	      redirectTo: '/notes'
 	    });
